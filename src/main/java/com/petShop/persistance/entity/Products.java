@@ -13,7 +13,7 @@ public class Products {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "id")
-        private Integer id;
+        private Integer productIds;
 
         @Column(name = "nombre")
         private String name;
@@ -37,4 +37,8 @@ public class Products {
                 inverseJoinColumns = @JoinColumn(name = "id_proveedor")
         )
         private List<Suppliers> providers;
+
+    public Object getId() {
+        return null;
+    }
 }

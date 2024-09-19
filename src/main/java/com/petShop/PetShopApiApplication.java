@@ -1,13 +1,20 @@
 package com.petShop;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+@RestController
+@RequestMapping("/mascotas")
 public class PetShopApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PetShopApiApplication.class, args);
+	@GetMapping("/saludo")
+	public String saludar() {
+		return "Bienvenido a la tienda de mascotas";
 	}
 
+	@GetMapping("/despedida")
+	public String despedir() {
+		return "Gracias por visitar la tienda de mascotas, ¡vuelve pronto!";
+	}
 }

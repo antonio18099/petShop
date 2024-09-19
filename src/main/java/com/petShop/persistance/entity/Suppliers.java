@@ -27,7 +27,7 @@ public class Suppliers {
     private String address;
 
     @ManyToMany(mappedBy = "providers")
-    private List<Products> products;
+    private List<Products> productsIds;
 
     @OneToMany(mappedBy = "provider")
     private List<Quotes> quotes;
